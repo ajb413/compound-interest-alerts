@@ -3,7 +3,7 @@
 A borrower interest rate monitor for the [Compound Protocol](https://compound.finance/). An AWS Lambda Function alerts the user via text message and email when the borrower interest rates go over their selected threshold. Interest rates rise and fall autonomously, based on supply and demand of assets in the market.
 
 ## What is Compound?
-Compound is an open-source, autonomous protocol built for developers, to unlock a universe of new financial applications. Interest and borrowing, for the open financial system.
+Compound is an open-source, autonomous protocol built for developers, to unlock a universe of new financial applications. Interest and borrowing, for the open financial system. Learn more on the website:
 
 <a href="https://compound.finance/?ref=github&user=ajb413&repo=compound-interest-alerts">
     <img alt="Compound Finance" src="https://raw.githubusercontent.com/ajb413/compound-interest-alerts/master/compound-finance-logo.png" width=260 height=60/>
