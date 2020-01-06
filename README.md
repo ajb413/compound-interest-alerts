@@ -24,13 +24,13 @@ This script does not access the blockchain directly. That functionality will be 
 - Make an AWS, Twilio, and SendGrid account if you haven't already.
 - Create a Lambda Function in the AWS console, in any region, with Node.js (12 or later) as the runtime.
 - Set the following environment variables for the Lambda Function:
-  - `process.env.twilio_sid` Twilio Account SID
-  - `process.env.twilio_auth_token` Twilio Auth Token
-  - `process.env.sendgrid_key` Sendgrid API Key
-  - `process.env.sms_from_number` Phone number that your Twilio account sends SMSs from.
-  - `process.env.sms_to_number` Your phone number.
-  - `process.env.to_email` Your email address.
-  - `process.env.from_email` Email that your SendGrid account sends emails from.
+  - `twilio_sid` Twilio Account SID
+  - `twilio_auth_token` Twilio Auth Token
+  - `sendgrid_key` Sendgrid API Key
+  - `sms_from_number` Phone number that your Twilio account sends SMSs from.
+  - `sms_to_number` Your phone number.
+  - `to_email` Your email address.
+  - `from_email` Email that your SendGrid account sends emails from.
 - Create `index.js` and `my-limits.json` in the Lambda editor.
 - Copy the contents of the files over. Set your alert limits in the JSON file as percentages.
 - Set a CloudWatch Event that executes the function every 15 minutes `rate(15 minutes)` which is similar to cron from Unix.
