@@ -1,4 +1,4 @@
-# Compound Protocol Interest Alert System
+# Compound Protocol Interest Alert System (With API)
 
 A borrower interest rate monitor for the [Compound Protocol](https://compound.finance/). An AWS Lambda Function alerts the user via text message and email when the borrower interest rates go over their selected threshold. Interest rates rise and fall autonomously, based on supply and demand of assets in the market.
 
