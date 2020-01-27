@@ -20,6 +20,9 @@ This script does not access the blockchain directly. That functionality will be 
 - [Twilio](https://www.twilio.com/) Account
 - [SendGrid](https://sendgrid.com/) Account
 
+## Caveat
+The system does not know how often it sends alerts because AWS Lambda does not have a simple way to store the "last send time" data. To implement a check for the most recent alert send time, you'd need to implement another storage system on AWS, like S3 or RDS. Without doing that, alerts might be sent every 15 minutes, unless the user turns off the Lambda function after the first alert. Implementing the alert frequency check with a seperate data persistence pattern is out of the scope of the tutorial.
+
 ## Installation
 - Make an AWS, Twilio, and SendGrid account if you haven't already.
 - Create a Lambda Function in the AWS console, in any region, with Node.js (12 or later) as the runtime.
@@ -35,4 +38,3 @@ This script does not access the blockchain directly. That functionality will be 
 - Copy the contents of the files over. Set your alert limits in the JSON file as percentages.
 - Set a CloudWatch Event that executes the function every 15 minutes `rate(15 minutes)` which is similar to cron from Unix.
 - Click the test button at the top of the page to test the function. Once you are ready, click Actions, and Publish a new version.
-
